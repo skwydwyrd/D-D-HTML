@@ -9,11 +9,13 @@
     <body class="bg-gray-800">
         <div>
             <nav class="fixed left-0 overflow-y-auto  w-64 text-xl bg-gray-900 border-r-2 inset-y-0 z-30 border-indigo-800 text-gray-500">
-                <img
-                    class="flex w-full p-2 mb-4 hover:bg-indigo-800 items-center justify-center"
-                    src="images/DNDampersand.jpeg"
-                    alt="Logo/Home"
-                    />
+                <a href='/index.html'>
+                    <img
+                        class="flex w-full p-2 mb-4 hover:bg-indigo-800 items-center justify-center"
+                        src="/images/DNDampersand.jpeg"
+                        alt="Logo/Home"
+                        />
+                </a>
                 <a 
 			        class="flex p-2 mb-4 hover:bg-indigo-800 items-center justify-center" 
 			        href="/pages/categories.html">
@@ -26,12 +28,12 @@
                 </a>
                 <a
                     class="flex p-2 mb-4 hover:bg-indigo-800 items-center justify-center" 
-                    href="/pages/combat-tracker.html">
+                    href="#">
                     Combat tracker
                 </a>
                 <a
                     class="flex p-2 mb-4 hover:bg-indigo-800 items-center justify-center"
-                    href="#">
+                    href="/pages/statblock-generator.html">
                     Statblack Generator
                 </a>
                 <a 
@@ -56,8 +58,47 @@
                 </a>
             </nav>
         </div>
-        <h2 class="text-white text-2xl m-4 p-4 pl-64">
-            Statblock Generator Page
-        </h2>
+
+        <main class="container mx-auto pl-64">
+
+                <h2 class="text-white text-2xl p-4">
+                    Combat Tracker Page
+                </h2>
+        
+        
+                <!-- Take input from user: name -->
+                <!-- after user types in input -> display that input on our page -->
+                <section>
+                    <div>
+                        <input 
+                            class="bg-gray-500 rounded rounded-md p-1 placeholder-indigo-400"
+                            type="text" 
+                            id="character-name" 
+                            placeholder="Character Name" 
+                        >
+
+                        <input class="bg-gray-500 rounded rounded-md p-1 placeholder-indigo-400"
+                            type="number" 
+                            id="character-hp"
+                            placeholder="Hit Points">
+
+                    </div>
+                    <button 
+                        onclick="proccessCharInfo()"
+                        class="bg-gray-600 hover:bg-indigo-800 rounded rounded-md p-1 px-4 text-indigo-400">
+                    Submit
+                    </button>
+                    <div
+                        class="bg-gray-500 text-indigo-500 rounded rounded-md p-4"
+                        id="char-info-output">
+                        
+                </div>
+        
+        
+                </section>
+        </main>
+
+
+    <script src="/scripts/combat-tracker.js"></script>
     </body>
 </html>
